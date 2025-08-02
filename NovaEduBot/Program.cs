@@ -26,11 +26,10 @@ async Task HandleStartAsync(long chatId)
     .Select(k => new[] { new KeyboardButton(k) })
     .ToArray();
 
-    string ImageUrl = "https://i.postimg.cc/5tVmjrsD/photo-2025-08-01-23-44-40.jpg";
+    string ImageUrl = "https://i.postimg.cc/YqWQr7Hd/photo-2025-08-03-00-41-09.jpg";
 
         try
         {
-            Console.WriteLine($"Rasm yuborishga urinish: {ImageUrl}");
             await botClient.SendPhoto(
                 chatId,
                 photo: ImageUrl,
@@ -43,8 +42,6 @@ async Task HandleStartAsync(long chatId)
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Rasm yuborishda xatolik: {ex.Message}");
-            // Rasm yuborishda xatolik bo'lsa, faqat matn yuboramiz
             await botClient.SendMessage(
                 chatId,
                 BotMessages.WelcomeMessage,
