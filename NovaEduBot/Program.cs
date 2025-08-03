@@ -95,7 +95,7 @@ async Task AskDistrictAsync(long chatId, string name)
 
 async Task AskPhoneAsync(long chatId, string district)
 {
-    userData[chatId]["district"] = district;
+    userData[chatId]["district"] = district;    
     userStates[chatId] = "ask_phone";
     await botClient.SendMessage(chatId, "Telefon raqamingizni kiriting:");
 }
